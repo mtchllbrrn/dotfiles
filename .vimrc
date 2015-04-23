@@ -12,8 +12,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Solarized colorscheme
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -37,7 +38,6 @@ filetype indent plugin on
 syntax on
 set background=dark
 colorscheme solarized
-
 
 "------------------------------------------------------------
 " Must have options {{{1
@@ -189,3 +189,12 @@ set foldnestmax=10      " 10 nested fold max
 nnoremap <space> za     
 set foldmethod=indent   " fold based on indent level
 
+" ctrlp bindings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+map <C-j> :NERDTreeToggle<CR>
+
+" Enable two-space tabs for ruby and HTML
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
