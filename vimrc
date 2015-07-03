@@ -198,3 +198,6 @@ map <C-k> :NERDTreeToggle<CR>
 " Enable two-space tabs for ruby and HTML
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+
+" Set anonymous (default) clipboard to system clipboard
+set clipboard=unnamed
