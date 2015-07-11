@@ -189,10 +189,10 @@ nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 
 " ctrlp bindings
-let g:ctrlp_map = '<c-j>'
+let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-map <C-k> :NERDTreeToggle<CR>
+map <C-o> :NERDTreeToggle<CR>
 
 " Enable two-space tabs for ruby and HTML
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
