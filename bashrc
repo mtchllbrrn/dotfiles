@@ -1,6 +1,7 @@
 alias 'ls'='ls -G'
 alias 'lsd'='ls -Al'
 
+
 prompt_git() {
     local s=""
     local branchName=""
