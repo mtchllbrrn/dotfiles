@@ -193,7 +193,7 @@ set foldmethod=indent   " fold based on indent level
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-map <C-o> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " Enable two-space tabs for ruby and HTML
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
