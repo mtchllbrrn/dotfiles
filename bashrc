@@ -1,9 +1,6 @@
 alias 'ls'='ls -G'
 alias 'la'='ls -Al'
 
-# Add boot2docker environment variables
-eval `boot2docker shellinit 2>/dev/null`
-
 prompt_git() {
     local s=""
     local branchName=""
