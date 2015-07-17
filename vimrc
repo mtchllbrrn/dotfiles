@@ -185,15 +185,16 @@ set lazyredraw
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
-" space opens/closes folds
-nnoremap <space> za     
 set foldmethod=indent   " fold based on indent level
 
+" ALMIGHTY SPACEBAR LEADER
+let mapleader=" "
+
 " ctrlp bindings
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 
-map <C-n> :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
 
 " Enable two-space tabs for ruby and HTML
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
