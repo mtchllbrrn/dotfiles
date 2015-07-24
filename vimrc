@@ -15,9 +15,18 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'mrtazz/simplenote.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+"-----------------------------------------------------------
+" Plugin configuration
+"
+" simplenote.vim
+" source .simplenoterc for Simplenote credentials to keep it out of version
+" control.
+source ~/.simplenoterc
 
 "------------------------------------------------------------
 " Features {{{1
