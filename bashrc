@@ -1,6 +1,9 @@
 alias 'ls'='ls -G'
 alias 'la'='ls -Al'
 
+# Gnomad startup alias
+alias ms='[ -f settings-development.json ] && meteor run --settings settings-development.json || meteor run'
+
 prompt_git() {
     local s=""
     local branchName=""
