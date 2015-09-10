@@ -194,8 +194,10 @@ let mapleader=" "
 " ctrlp bindings
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_show_hidden = 1
 
 map <Leader>n :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " Enable two-space tabs for ruby and HTML
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
