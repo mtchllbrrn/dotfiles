@@ -4,6 +4,8 @@ alias 'la'='ls -Al'
 # Gnomad startup alias
 alias ms='[ -f settings-development.json ] && meteor run --settings settings-development.json || meteor run'
 
+alias gpl='git pull && git submodule foreach git pull origin master'
+
 prompt_git() {
     local s=""
     local branchName=""
