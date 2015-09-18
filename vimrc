@@ -191,6 +191,10 @@ let mapleader=" "
 inoremap jk <Esc>
 inoremap kj <Esc>
 
+" Handle wrapped lines sanely
+nmap j gj
+nmap k gk
+
 " ctrlp bindings
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
