@@ -187,6 +187,10 @@ set lazyredraw
 " ALMIGHTY SPACEBAR LEADER
 let mapleader=" "
 
+" jk / kj to leave insert
+inoremap jk <Esc>
+inoremap kj <Esc>
+
 " ctrlp bindings
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
