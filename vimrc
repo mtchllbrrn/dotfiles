@@ -194,6 +194,7 @@ let g:ctrlp_show_hidden = 1
 
 map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+let NERDTreeShowLineNumbers=1
 
 " Enable two-space tabs for ruby and HTML
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
