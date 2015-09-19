@@ -251,3 +251,6 @@ let g:Easymotion_do_mapping = 0 " Disable default bindings.
 hi EasyMotionTarget2First ctermbg=none ctermfg=3
 hi EasyMotionTarget2Second ctermbg=none ctermfg=3
 nmap <Leader>f <plug>(easymotion-s)
+
+" Disable Esc in insert mode while I retrain for jk / kj
+inoremap <C-[> <NOP>
