@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mrtazz/simplenote.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -207,3 +208,33 @@ let NERDTreeShowLineNumbers=1
 " Enable two-space tabs for ruby and HTML
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+
+" Syntastic Configuration
+
+" Mark syntax errors with :signs
+let g:syntastic_enable_signs=1
+
+" Do not automatically jump to the error when saving the file
+" Jump feature is annoying to me as it automatically moves the cursor
+let g:syntastic_auto_jump=0
+
+" Show the error list automatically
+" Allows you to easily navigate the quick fix list
+let g:syntastic_auto_loc_list=1
+
+" This is where the magic happens. Chain together different style checkers
+" in order to check for both style flaws and syntax errors.
+" Syntax checkers: https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
+let g:syntastic_ruby_checkers=['rubocop', 'mri']
+let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
+let g:syntastic_javascript_checkers=['jshint']
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" Recommended settings from GH repo.
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
