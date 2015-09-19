@@ -189,6 +189,7 @@ map Y y$
 set lazyredraw
 
 " ALMIGHTY SPACEBAR LEADER
+nnoremap <Space> <NOP>
 let mapleader=" "
 
 " jk / kj to leave insert
