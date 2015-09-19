@@ -20,6 +20,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
+Plugin 'Lokaltog/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -243,3 +244,9 @@ let g:syntastic_check_on_wq = 0
 
 " Airline settings
 let g:airline_powerline_fonts = 1
+
+" Easymotion settings
+let g:Easymotion_do_mapping = 0 " Disable default bindings.
+hi EasyMotionTarget2First ctermbg=none ctermfg=3
+hi EasyMotionTarget2Second ctermbg=none ctermfg=3
+nmap <Leader>f <plug>(easymotion-s)
