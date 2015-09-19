@@ -18,6 +18,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mrtazz/simplenote.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
+Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
