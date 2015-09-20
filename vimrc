@@ -248,8 +248,13 @@ let g:airline_powerline_fonts = 1
 
 " Easymotion settings
 let g:Easymotion_do_mapping = 0 " Disable default bindings.
-hi EasyMotionTarget2First ctermbg=none ctermfg=3
+" hi EasyMotionTarget2First ctermbg=none ctermfg=3
+" hi EasyMotionTarget2Second ctermbg=none ctermfg=3
+hi EasyMotionTarget ctermbg=none ctermfg=1
+hi EasyMotionShade  ctermbg=none ctermfg=236
+hi EasyMotionTarget2First ctermbg=none ctermfg=1
 hi EasyMotionTarget2Second ctermbg=none ctermfg=3
+hi EasyMotionMoveHL ctermbg=green ctermfg=black
 nmap <Leader>f <plug>(easymotion-s)
 
 " Disable Esc in insert mode while I retrain for jk / kj
