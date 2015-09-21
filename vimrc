@@ -201,7 +201,7 @@ inoremap kj <Esc>
 nmap j gj
 nmap k gk
 
-" ctrlp config 
+" ctrlp config
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
@@ -273,6 +273,3 @@ hi EasyMotionTarget2First ctermbg=none ctermfg=1
 hi EasyMotionTarget2Second ctermbg=none ctermfg=3
 hi EasyMotionMoveHL ctermbg=green ctermfg=black
 nmap <Leader>f <plug>(easymotion-s)
-
-" Disable Esc in insert mode while I retrain for jk / kj
-inoremap <C-[> <NOP>
