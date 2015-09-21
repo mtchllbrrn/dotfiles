@@ -201,10 +201,16 @@ inoremap kj <Esc>
 nmap j gj
 nmap k gk
 
-" ctrlp bindings
+" ctrlp config 
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn|meteor)$',
+  \ 'file': '\v\.(exe|so|dll|swp)$',
+  \ 'link': '',
+  \ }
 
 map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
