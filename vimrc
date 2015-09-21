@@ -208,6 +208,7 @@ let g:ctrlp_show_hidden = 1
 map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
+let NERDTreeIgnore = ['.swp']
 
 " Disallow NERDTree from remapping C-j/k. This was conflicting with tmux/vim
 " split navigation.
