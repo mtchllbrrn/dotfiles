@@ -2,7 +2,7 @@ alias 'ls'='ls -G'
 alias 'la'='ls -Al'
 
 alias 'gs'='git status -sb'
-alias 'gl'='git log --oneline'
+alias 'gl'='git log --oneline -10'
 
 # Gnomad startup alias
 alias ms='[ -f settings-development.json ] && meteor run --settings settings-development.json || meteor run'
