@@ -1,6 +1,8 @@
 alias 'ls'='ls -G'
 alias 'la'='ls -Al'
 
+alias 'mvim'='/Applications/MacVim.app/Contents/MacOS/MacVim'
+
 alias 'gs'='git status -sb'
 alias 'gl'='git log --oneline -10'
 
