@@ -6,9 +6,11 @@ alias 'mvim'='/Applications/MacVim.app/Contents/MacOS/MacVim'
 alias 'gs'='git status -sb'
 alias 'gl'='git log --oneline -10'
 
+# prettify JSON by piping to this alias.
+alias 'json'='python -m json.tool'
+
 # Gnomad startup alias
 alias ms='[ -f settings-development.json ] && meteor run --settings settings-development.json || meteor run'
-
 alias gpl='git pull && git submodule foreach git pull origin master'
 
 prompt_git() {
