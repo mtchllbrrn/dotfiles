@@ -182,6 +182,9 @@ set expandtab
 " them up.
 set lazyredraw
 
+" Enable relative line numbers.
+set relativenumber
+
 "------------------------------------------------------------
 " Mappings {{{1
 
