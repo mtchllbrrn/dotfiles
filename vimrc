@@ -89,15 +89,18 @@ let g:airline_powerline_fonts = 1
 
 " Easymotion settings
 let g:Easymotion_do_mapping = 0 " Disable default bindings.
-" hi EasyMotionTarget2First ctermbg=none ctermfg=3
-" hi EasyMotionTarget2Second ctermbg=none ctermfg=3
 hi EasyMotionTarget ctermbg=none ctermfg=1
 hi EasyMotionShade  ctermbg=none ctermfg=236
-hi EasyMotionTarget2First ctermbg=none ctermfg=1
-hi EasyMotionTarget2Second ctermbg=none ctermfg=3
+hi link EasyMotionTarget2First Search
+hi link EasyMotionTarget2Second Search
+"hi EasyMotionTarget2First ctermbg=none ctermfg=50
+"hi EasyMotionTarget2Second ctermbg=none ctermfg=50
+"hi link EasyMotionTarget2First ErrorMsg
+"hi link EasyMotionTarget2Second ErrorMsg
 hi EasyMotionMoveHL ctermbg=green ctermfg=black
 
 " filetype indent plugin on
+filetype plugin on
 set smartindent
 syntax on
 
