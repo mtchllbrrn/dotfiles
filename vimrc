@@ -93,8 +93,8 @@ hi EasyMotionTarget ctermbg=none ctermfg=1
 hi EasyMotionShade  ctermbg=none ctermfg=236
 hi link EasyMotionTarget2First Search
 hi link EasyMotionTarget2Second Search
-"hi EasyMotionTarget2First ctermbg=none ctermfg=50
-"hi EasyMotionTarget2Second ctermbg=none ctermfg=50
+"hi EasyMotionTarget2First ctermbg=none ctermfg=35
+"hi EasyMotionTarget2Second ctermbg=none ctermfg=35
 "hi link EasyMotionTarget2First ErrorMsg
 "hi link EasyMotionTarget2Second ErrorMsg
 hi EasyMotionMoveHL ctermbg=green ctermfg=black
@@ -209,3 +209,6 @@ map <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>f <plug>(easymotion-s)
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Syntastic
+map <Leader>ss :SyntasticToggleMode<CR>

@@ -2,9 +2,17 @@ alias 'ls'='ls -G'
 alias 'la'='ls -Al'
 
 alias 'mvim'='/Applications/MacVim.app/Contents/MacOS/MacVim'
+alias 'st'='open -a SourceTree'
 
+# recolor ag paths
+alias 'ag'='ag --color-path=35'
+
+alias 'ga'='git add'
 alias 'gs'='git status -sb'
 alias 'gl'='git log --oneline -10'
+alias 'go'='git checkout'
+alias 'gc'='git commit -m'
+alias 'gb'='git branch'
 
 # prettify JSON by piping to this alias.
 alias 'json'='python -m json.tool'
