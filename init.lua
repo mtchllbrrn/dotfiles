@@ -91,16 +91,16 @@ end
 -- -----------------
 
 -- Movement hotkeys
-hs.hotkey.bind(nudgekey, 'down', function() nudge(0,100) end) 	--down
-hs.hotkey.bind(nudgekey, "up", function() nudge(0,-100) end)	--up
-hs.hotkey.bind(nudgekey, "right", function() nudge(100,0) end)	--right
-hs.hotkey.bind(nudgekey, "left", function() nudge(-100,0) end)	--left
+--hs.hotkey.bind(nudgekey, 'down', function() nudge(0,100) end) 	--down
+--hs.hotkey.bind(nudgekey, "up", function() nudge(0,-100) end)	--up
+--hs.hotkey.bind(nudgekey, "right", function() nudge(100,0) end)	--right
+--hs.hotkey.bind(nudgekey, "left", function() nudge(-100,0) end)	--left
 
 -- Resize hotkeys
-hs.hotkey.bind(yankkey, "up", function() yank(0,-100) end) -- yank bottom up
-hs.hotkey.bind(yankkey, "down", function() yank(0,100) end) -- yank bottom down
-hs.hotkey.bind(yankkey, "right", function() yank(100,0) end) -- yank right side right
-hs.hotkey.bind(yankkey, "left", function() yank(-100,0) end) -- yank right side left
+--hs.hotkey.bind(yankkey, "up", function() yank(0,-100) end) -- yank bottom up
+--hs.hotkey.bind(yankkey, "down", function() yank(0,100) end) -- yank bottom down
+--hs.hotkey.bind(yankkey, "right", function() yank(100,0) end) -- yank right side right
+--hs.hotkey.bind(yankkey, "left", function() yank(-100,0) end) -- yank right side left
 
 -- Push to screen edge
 hs.hotkey.bind(pushkey,"left", function() push(0,0,0.5,1) end) 		-- left side
@@ -125,18 +125,6 @@ hs.hotkey.bind(pushkey,"down", function()	push(0,0.5,1,0.5) end)	-- bottom half
 -- Fullscreen
 hs.hotkey.bind(pushkey, "f", function() push(0,0,1,1) end)
 
--- Move a window between monitors
-hs.hotkey.bind(pushkey,"1", function() moveToMonitor(1) end) -- Move to first monitor
-hs.hotkey.bind(sendkey,"1", function() 											 -- Move to first monitor and fullscreen
-	moveToMonitor(1)
-	push(0,0,1,1)
-end)
-hs.hotkey.bind(pushkey,"2", function() moveToMonitor(2) end) -- Move to second monitor
-hs.hotkey.bind(sendkey,"2", function() 											 -- Move to second monitor and fullscreen
-	moveToMonitor(2)
-	push(0,0,1,1)
-end)
-
 -- Focus windows
 local function focus(direction)
   local fn = "focusWindow" .. (direction:gsub("^%l", string.upper))
@@ -154,21 +142,21 @@ hs.hints.showTitleThresh = 0
 hs.hints.style = "vimperator"
 hs.hotkey.bind(hyper, 'f', hs.hints.windowHints)
 
+-- Window navigation
 hs.hotkey.bind(hyper, "up", focus("north"))
 hs.hotkey.bind(hyper, "right", focus("east"))
 hs.hotkey.bind(hyper, "down", focus("south"))
 hs.hotkey.bind(hyper, "left", focus("west"))
 
-
 hs.grid.ui.showExtraKeys = false
 hs.grid.ui.textSize = 25
-hs.grid.setGrid('4x4')
+hs.grid.setGrid('12x2')
 hs.hotkey.bind(hyper, "r", function()
   hs.grid.show()
 end)
 
 -------------
--- LAYOUTS
+-- LAYOUTS - Currently not in use.
 -------------
 
 hs.hotkey.bind(hyper, "z", function()
@@ -223,7 +211,7 @@ end)
 hs.hotkey.bind(hyper, "p", function()
   hs.application.launchOrFocus("Messages")
 end)
-hs.hotkey.bind(hyper, "\'", function()
+hs.hotkey.bind(hyper, '[', function()
   hs.application.launchOrFocus("Textual IRC Client")
 end)
 hs.hotkey.bind(hyper, ";", function()
