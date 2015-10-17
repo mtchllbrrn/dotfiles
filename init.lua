@@ -143,10 +143,10 @@ hs.hints.style = "vimperator"
 hs.hotkey.bind(hyper, 'f', hs.hints.windowHints)
 
 -- Window navigation
-hs.hotkey.bind(hyper, "up", focus("north"))
-hs.hotkey.bind(hyper, "right", focus("east"))
-hs.hotkey.bind(hyper, "down", focus("south"))
-hs.hotkey.bind(hyper, "left", focus("west"))
+hs.hotkey.bind(hyper, "k", focus("north"))
+hs.hotkey.bind(hyper, "l", focus("east"))
+hs.hotkey.bind(hyper, "j", focus("south"))
+hs.hotkey.bind(hyper, "h", focus("west"))
 
 hs.grid.ui.showExtraKeys = false
 hs.grid.ui.textSize = 25
