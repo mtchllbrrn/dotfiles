@@ -1,3 +1,7 @@
+# source githelpers
+source ~/dotfiles/githelpers.sh
+alias 'glp'='pretty_git_log'
+
 alias 'ls'='ls -G'
 alias 'la'='ls -Al'
 
@@ -18,8 +22,8 @@ alias 'gb'='git branch'
 alias 'json'='python -m json.tool'
 
 # Gnomad startup alias
-alias ms='[ -f settings-development.json ] && meteor run --settings settings-development.json || meteor run'
-alias gpl='git pull && git submodule foreach git pull origin master'
+#alias ms='[ -f settings-development.json ] && meteor run --settings settings-development.json || meteor run'
+#alias gpl='git pull && git submodule foreach git pull origin master'
 
 # Blendata
 alias dt_query='http -f https://lincoln.gopdatatrust.com/v2/api/query.php ClientToken=20C4378C-7B62-4DF7-8FF5-795DC3BF7044 Call_ID=56044b8f6348165165c0a6ff'
