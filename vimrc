@@ -22,6 +22,9 @@ Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'spf13/vim-autoclose'
+Plugin 'edsono/vim-matchit'
+Plugin 'vim-scripts/closetag.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -98,6 +101,10 @@ hi link EasyMotionTarget2Second Search
 "hi link EasyMotionTarget2First ErrorMsg
 "hi link EasyMotionTarget2Second ErrorMsg
 hi EasyMotionMoveHL ctermbg=green ctermfg=black
+
+" Autoclose settings
+let g:autoclose_vim_commentmode = 1
+
 
 " filetype indent plugin on
 filetype plugin on
