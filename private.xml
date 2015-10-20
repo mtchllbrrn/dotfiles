@@ -352,22 +352,6 @@
 
       <autogen>__KeyToKey__ KeyCode::A, KeyCode::OPTION_L</autogen>
 
-      <block>
-        <only>TERMINAL</only>
-        <autogen>
-          --KeyToKey--
-          {{VI_H}}, VK_OPTION | ModifierFlag::NONE,
-          KeyCode::ESCAPE,
-          KeyCode::B
-        </autogen>
-        <autogen>
-          --KeyToKey--
-          {{VI_L}}, VK_OPTION | ModifierFlag::NONE,
-          KeyCode::ESCAPE,
-          KeyCode::F
-        </autogen>
-      </block>
-
       <autogen>
         __KeyToKey__
         {{VI_J}}, VK_OPTION | ModifierFlag::NONE,
