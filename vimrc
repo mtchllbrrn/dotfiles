@@ -26,6 +26,9 @@ Plugin 'spf13/vim-autoclose'
 Plugin 'edsono/vim-matchit'
 Plugin 'vim-scripts/closetag.vim'
 
+"Plugin 'Yggdroot/indentLine'
+"Plugin 'nathanaelkane/vim-indent-guides'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -105,6 +108,11 @@ hi EasyMotionMoveHL ctermbg=green ctermfg=black
 " Autoclose settings
 let g:autoclose_vim_commentmode = 1
 
+" Set indent-line character
+let g:indentLine_char = '│'
+
+" Highlight 80th column
+set colorcolumn=80
 
 " filetype indent plugin on
 filetype plugin on
@@ -165,6 +173,8 @@ set t_vb=
 
 " Enable use of the mouse for all modes
 set mouse=a
+" Using this to enable vim split resizing with mouse drag
+set ttymouse=xterm2
 
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"

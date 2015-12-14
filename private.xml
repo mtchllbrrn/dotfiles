@@ -350,7 +350,7 @@
       <appendix>- Use U/P to go to the first/last tab (in most apps)</appendix>
       <appendix>- Use A+H/L to move to previous/next word in all apps (including iTerm 2)</appendix>
 
-      <autogen>__KeyToKey__ KeyCode::A, KeyCode::OPTION_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::Z, KeyCode::OPTION_L</autogen>
 
       <autogen>
         __KeyToKey__
@@ -368,7 +368,7 @@
       <autogen>__KeyToKey__ {{VI_K}}, KeyCode::CURSOR_UP</autogen>
       <autogen>__KeyToKey__ {{VI_L}}, KeyCode::CURSOR_RIGHT</autogen>
 
-      <autogen>__KeyToKey__ KeyCode::F, KeyCode::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::V, KeyCode::COMMAND_L</autogen>
 
       <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SHIFT_L</autogen>
 
@@ -422,7 +422,7 @@
       <identifier>remap.com_jasonrudolph_simultaneouskeypresses_vimode_sd</identifier>
       <autogen>
         __SimultaneousKeyPresses__
-        KeyCode::D, KeyCode::S,
+        KeyCode::C, KeyCode::X,
         KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_com_jasonrudolph_simultaneouskeypresses_vimode
       </autogen>
     </item>

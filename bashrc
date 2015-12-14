@@ -17,6 +17,7 @@ alias 'gl'='git log --oneline -10'
 alias 'go'='git checkout'
 alias 'gc'='git commit -m'
 alias 'gb'='git branch'
+alias 'glu'='git log --first-parent --no-merges'
 
 # prettify JSON by piping to this alias.
 alias 'json'='python -m json.tool'
@@ -163,3 +164,6 @@ set_prompts() {
 
 set_prompts
 unset set_prompts
+
+export NVM_DIR="/Users/mitchell/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
