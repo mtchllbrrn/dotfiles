@@ -75,7 +75,7 @@ let g:syntastic_auto_jump=0
 
 " Show the error list automatically
 " Allows you to easily navigate the quick fix list
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 
 " This is where the magic happens. Chain together different style checkers
 " in order to check for both style flaws and syntax errors.
