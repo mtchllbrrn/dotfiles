@@ -7,6 +7,7 @@ alias 'la'='ls -Al'
 
 alias 'mvim'='/Applications/MacVim.app/Contents/MacOS/MacVim'
 alias 'st'='open -a SourceTree'
+alias 'lint'='eslint --ext ".js, .jsx" .'
 
 # recolor ag paths
 alias 'ag'='ag --color-path=35'
