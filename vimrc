@@ -58,6 +58,10 @@ let NERDTreeIgnore = ['.swp']
 let g:NERDTreeMapJumpNextSibling = '<Nop>'
 let g:NERDTreeMapJumpPrevSibling = '<Nop>'
 
+" NERDCommenter settings
+" Include space after comment operator
+let g:NERDSpaceDelims = 1
+
 " Disable error-checking on html files. It's too wonky with stuff like
 " template tags.
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
