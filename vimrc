@@ -135,6 +135,9 @@ colorscheme solarized
 " Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
+"
+"This unsets the 'last search pattern' register by hitting return
+nnoremap <silent><CR> :noh<CR>
 
 " Better command-line completion
 set wildmenu
