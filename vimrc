@@ -25,8 +25,9 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'spf13/vim-autoclose'
 Plugin 'edsono/vim-matchit'
 Plugin 'vim-scripts/closetag.vim'
+Plugin 'reedes/vim-pencil'
+Plugin 'Yggdroot/indentLine'
 
-"Plugin 'Yggdroot/indentLine'
 "Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
@@ -39,6 +40,10 @@ call vundle#end()            " required
 " source .simplenoterc for Simplenote credentials to keep it out of version
 " control.
 source ~/.simplenoterc
+
+" vim-pencil config
+" Enable airline pencil-status display
+let g:airline_section_x = '%{PencilMode()}'
 
 " ctrlp config
 let g:ctrlp_show_hidden = 1
@@ -112,8 +117,9 @@ hi EasyMotionMoveHL ctermbg=green ctermfg=black
 " Autoclose settings
 let g:autoclose_vim_commentmode = 1
 
+" yggdroot/indentLine settings
 " Set indent-line character
-let g:indentLine_char = '│'
+let g:indentLine_char = '¦'
 
 " Highlight 80th column
 set colorcolumn=80
@@ -230,6 +236,9 @@ map <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>f <plug>(easymotion-s)
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
+
+" vim-pencil
+map <Leader>w :TogglePencil<CR>
 
 " Syntastic
 map <Leader>ss :SyntasticToggleMode<CR>
