@@ -58,11 +58,27 @@ let g:ctrlp_custom_ignore = {
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeIgnore = ['.swp']
+let NERDTreeQuitOnOpen=1 " Automatically closes NERDTree upon file selection
 
 " Disallow NERDTree from remapping C-j/k. This was conflicting with tmux/vim
 " split navigation.
 let g:NERDTreeMapJumpNextSibling = '<Nop>'
 let g:NERDTreeMapJumpPrevSibling = '<Nop>'
+
+"Close NERDTree if it is the last open buffer
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+function! s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
 
 " NERDCommenter settings
 " Include space after comment operator
