@@ -27,6 +27,7 @@ Plugin 'edsono/vim-matchit'
 Plugin 'vim-scripts/closetag.vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'Yggdroot/indentLine'
+Plugin 'tpope/vim-surround'
 
 "Plugin 'nathanaelkane/vim-indent-guides'
 
