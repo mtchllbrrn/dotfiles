@@ -254,6 +254,10 @@ nmap k gk
 nnoremap <Space> <NOP>
 let mapleader=" "
 
+" Make splitting vim windows easier
+map <leader>" <C-W>s
+map <leader>% <C-W>v
+
 " Plugin Mappings
 map <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>f <plug>(easymotion-s)
