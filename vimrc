@@ -55,6 +55,9 @@ let g:ctrlp_custom_ignore = {
   \ 'link': '',
   \ }
 
+" Close NERDTree if it's the only window in current tab
+let g:ctrlp_dont_split = 'NERD'
+
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeIgnore = ['.swp']
