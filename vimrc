@@ -28,6 +28,17 @@ Plugin 'vim-scripts/closetag.vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-surround'
+Plugin 'mxw/vim-jsx'
+Plugin 'vim-scripts/YankRing.vim'
+Plugin 'SirVer/ultisnips'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'ternjs/tern_for_vim'
+Plugin 'rking/ag.vim'
+Plugin 'pangloss/vim-javascript'
+
+" Snippets
+Plugin 'honza/vim-snippets'
+" Plugin 'greg-js/vim-react-es6-snippets'
 
 "Plugin 'nathanaelkane/vim-indent-guides'
 
@@ -37,6 +48,12 @@ call vundle#end()            " required
 "-----------------------------------------------------------
 " Plugin configuration
 "
+" vim-jsx config (enhanced react highlighting)
+let g:jsx_ext_required = 1 " only allow jsx highlighting in .jsx files.
+
+" vim-javascript config (enhanced js highlighting)
+let g:javascript_enable_domhtmlcss = 1 " Enable html/css syntax in js files
+
 " simplenote.vim
 " source .simplenoterc for Simplenote credentials to keep it out of version
 " control.
@@ -141,6 +158,9 @@ let g:autoclose_vim_commentmode = 1
 " Set indent-line character
 let g:indentLine_char = '¦'
 
+" vim config options
+" ==================
+
 " Highlight 80th column
 set colorcolumn=80
 
@@ -235,6 +255,16 @@ set lazyredraw
 " Enable relative line numbers.
 set relativenumber
 
+" Automatically strip trailing whitespace on :w
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd FileType c,cpp,java,php,ruby,python,javascript autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
 "------------------------------------------------------------
 " Mappings {{{1
 
@@ -269,3 +299,13 @@ map <Leader>w :TogglePencil<CR>
 
 " Syntastic
 map <Leader>ss :SyntasticToggleMode<CR>
+
+" UltiSnips
+" Trigger configuration.
+let g:UltiSnipsExpandTrigger = "<C-l>"
+let g:UltiSnipsJumpForwardTrigger = "<C-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
+
+" YouCompleteMe
+let g:ycm_key_list_select_completion = ['<C-j>']
+let g:ycm_key_list_previous_completion = ['<C-k>']
