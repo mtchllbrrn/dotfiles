@@ -1,0 +1,41 @@
+# ~/.tmuxinator/reacterminator.yml
+
+name: reacterminator
+root: ~/work/src/reacterminator/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: v-term
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t blendata
+
+windows:
+  - v-term: vim -c 'vsplit'
+  - v-ypo: cd ../ypo/; vim -c 'vsplit'
+  - serv:
+      layout: 4fff,318x78,0,0{160x78,0,0[160x27,0,0,1,160x26,0,28,6,160x23,0,55,13],157x78,161,0[157x27,161,0,7,157x26,161,28,12,157x23,161,55,14]}
+      panes:
+        - echo foo
+        - echo bar
+        - gs
+        - cd ~/work/src/ypo/; echo foo
+        - cd ~/work/src/ypo/; echo bar
+        - cd ~/work/src/ypo/; gs
