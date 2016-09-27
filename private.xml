@@ -58,7 +58,7 @@
 
   <item>
       <name>Remap Caps Lock to CTRL with Escape on tap</name>
-      <appendix>OS X doesn't have a Hyper. This maps caps lock Control, unless you tap it. Then it sends Escape.</appendix>
+      <appendix>This maps caps lock to Control, unless you tap it. Then it sends Escape.</appendix>
 
       <identifier>caps_lock_to_ctrl_or_escape</identifier>
 
@@ -72,14 +72,14 @@
   </item>
 
   <item>
-      <name>Remap Right Command to Hyper</name>
-      <appendix>OS X doesn't have a Hyper. This maps right command to Control + Shift + Option + Command.</appendix>
+      <name>Remap Left Control to Hyper</name>
+      <appendix>OS X doesn't have a Hyper. This maps left control to Control + Shift + Option + Command.</appendix>
 
-      <identifier>caps_lock_to_hyper_or_escape</identifier>
+      <identifier>left_control_to_hyper</identifier>
 
       <autogen>
           --KeyOverlaidModifier--
-          KeyCode::COMMAND_R,
+          KeyCode::CONTROL_L,
 
           KeyCode::COMMAND_L,
           ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L
