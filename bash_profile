@@ -5,8 +5,6 @@ fi
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 export PGDATA=/usr/local/var/postgres
 export PACKAGE_DIRS="$HOME/src/meteor-packages"
 

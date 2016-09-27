@@ -1,6 +1,9 @@
 # source githelpers
 source ~/dotfiles/githelpers.sh
 
+# Source to load chruby automatically. This is a simple script that allows for easy switching between Ruby versions.
+# source /usr/local/opt/chruby/share/chruby/auto.sh
+
 alias 'glp'='pretty_git_log'
 
 alias 'ls'='ls -G'
