@@ -13,6 +13,9 @@ export NVM_DIR="/Users/mitchell/.nvm"
 
 export EDITOR=vim
 
+# Set up Go workspace for Blendata importer script.
+export GOPATH=$HOME/work/src/go
+
 prompt_git() {
     local s=""
     local branchName=""
