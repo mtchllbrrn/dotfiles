@@ -26,7 +26,7 @@ Plugin 'spf13/vim-autoclose'
 Plugin 'edsono/vim-matchit'
 Plugin 'vim-scripts/closetag.vim'
 Plugin 'reedes/vim-pencil'
-Plugin 'Yggdroot/indentLine'
+" Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-surround'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-scripts/YankRing.vim'
@@ -35,6 +35,8 @@ Plugin 'SirVer/ultisnips'
 " Plugin 'ternjs/tern_for_vim'
 Plugin 'rking/ag.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'junegunn/goyo.vim'
+Plugin 'suan/vim-instant-markdown'
 
 " Snippets
 Plugin 'honza/vim-snippets'
@@ -47,7 +49,18 @@ call vundle#end()            " required
 
 "-----------------------------------------------------------
 " Plugin configuration
-"
+"-----------------------------------------------------------
+
+" show diff between current buffer & saved version.
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
+
 " vim-jsx config (enhanced react highlighting)
 let g:jsx_ext_required = 1 " only allow jsx highlighting in .jsx files.
 
@@ -67,7 +80,7 @@ let g:airline_section_x = '%{PencilMode()}'
 let g:ctrlp_show_hidden = 1
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|meteor)$',
+  \ 'dir':  'node_modules\|DS_Store\|.git\|.meteor',
   \ 'file': '\v\.(exe|so|dll|swp)$',
   \ 'link': '',
   \ }
@@ -125,6 +138,7 @@ let g:syntastic_auto_loc_list=0
 let g:syntastic_ruby_checkers=['rubocop', 'mri']
 let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
 let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_javascript_eslint_args="--ext .js,.jsx"
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -161,8 +175,12 @@ let g:indentLine_char = '¦'
 " vim config options
 " ==================
 
-" Highlight 80th column
-set colorcolumn=80
+" Disable character hiding, specifically because double quotes were being
+" hidden in json files.
+set conceallevel=0
+
+" Highlight 100th column
+set colorcolumn=100
 
 " filetype indent plugin on
 filetype plugin on
@@ -171,6 +189,12 @@ syntax on
 
 set background=dark
 colorscheme solarized
+"
+" If the current iTerm tab has been
+" created using the **dark** profile:
+if $ITERM_PROFILE == 'Solarized Light'
+  set background=light
+endif
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -265,8 +289,19 @@ endfun
 
 autocmd FileType c,cpp,java,php,ruby,python,javascript autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
+" Configure scroll-wheel to scroll one line at a time, rather than three
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
 "------------------------------------------------------------
 " Mappings {{{1
+
+" ALMIGHTY SPACEBAR LEADER
+nnoremap <Space> <NOP>
+let mapleader=" "
+
+" Diff saved version of buffer
+nmap <leader>d :DiffSaved<CR>
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
@@ -279,10 +314,6 @@ inoremap kj <Esc>
 " Handle wrapped lines sanely
 nmap j gj
 nmap k gk
-
-" ALMIGHTY SPACEBAR LEADER
-nnoremap <Space> <NOP>
-let mapleader=" "
 
 " Make splitting vim windows easier
 map <leader>" <C-W>s
