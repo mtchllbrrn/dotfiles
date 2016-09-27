@@ -347,6 +347,11 @@
       <name>What's (S)uper (D)uper Mode?</name>
       <identifier vk_config="true">notsave.com.jasonrudolph.simultaneouskeypresses_vimode</identifier>
 
+      <appendix>MITCHELL'S NOTE: I have updated super-duper to use x+c instead of s+d for mode-switching.</appendix>
+      <appendix>This prevents situations where the user types a words with adjacent S's and D's, causing erroneous mode-switching</appendix>
+      <appendix>In addition, I've change superduper+u and superduper+p away from command+1 / command+9 to prevent collisions (for instance, Slack's team-switching)</appendix>
+      <appendix>They now output command+shift+- and command+shift+=, respectively.</appendix>
+      <appendix>These don't do anything out of the box, in most apps, and so they should be bound with something like Keyboard Maestro.</appendix>
       <appendix>To activate, push S and D keys simultaneously and hold them down.</appendix>
       <appendix>Now you're in (S)uper (D)uper mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.)</appendix>
       <appendix>It's optimized for keeping you on the home row, or very close to it.</appendix>
@@ -423,12 +428,12 @@
       <autogen>
         __KeyToKey__
         KeyCode::U,
-        KeyCode::KEY_1, ModifierFlag::COMMAND_L
+        KeyCode::MINUS, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
       </autogen>
       <autogen>
         __KeyToKey__
         KeyCode::P,
-        KeyCode::KEY_9, ModifierFlag::COMMAND_L
+        KeyCode::EQUAL, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
       </autogen>
     </item>
     <item>
