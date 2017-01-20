@@ -123,7 +123,7 @@ hs.hotkey.bind(hyper,"down", function()	push(0,0.5,1,0.5) end)	-- bottom half
 --hs.hotkey.bind(pushkey, "c", function() push(0.05,0.05,0.9,0.9) end)
 
 -- Fullscreen
-hs.hotkey.bind(pushkey, "f", function() push(0,0,1,1) end)
+hs.hotkey.bind(hyper, "f", function() push(0,0,1,1) end)
 
 -- Focus windows
 local function focus(direction)
@@ -138,9 +138,9 @@ local function focus(direction)
 end
 
 -- Modal window layouts
-hs.hints.showTitleThresh = 0
-hs.hints.style = "vimperator"
-hs.hotkey.bind(hyper, 'f', hs.hints.windowHints)
+-- hs.hints.showTitleThresh = 0
+-- hs.hints.style = "vimperator"
+-- hs.hotkey.bind(hyper, 'f', hs.hints.windowHints)
 
 -- Window navigation
 hs.hotkey.bind(hyper, "k", focus("north"))
@@ -159,37 +159,37 @@ end)
 -- LAYOUTS - Currently not in use.
 -------------
 
-hs.hotkey.bind(hyper, "z", function()
-  hs.mjomatic.go({
-    "i",
-    "",
-    "i iTerm"
-  })
-end)
-hs.hotkey.bind(hyper, "x", function()
-  hs.mjomatic.go({
-    "c",
-    "",
-    "c Google Chrome"
-  })
-end)
-hs.hotkey.bind(hyper, "c", function()
-  hs.mjomatic.go({
-    "sssssstttt",
-    "ssssssmmmm",
-    "",
-    "s Slack",
-    "t Textual IRC Client",
-    "m Messages"
-  })
-end)
-hs.hotkey.bind(hyper, "v", function()
-  hs.mjomatic.go({
-    "s",
-    "",
-    "s Spotify"
-  })
-end)
+-- hs.hotkey.bind(hyper, "z", function()
+  -- hs.mjomatic.go({
+    -- "i",
+    -- "",
+    -- "i iTerm"
+  -- })
+-- end)
+-- hs.hotkey.bind(hyper, "x", function()
+  -- hs.mjomatic.go({
+    -- "c",
+    -- "",
+    -- "c Google Chrome"
+  -- })
+-- end)
+-- hs.hotkey.bind(hyper, "c", function()
+  -- hs.mjomatic.go({
+    -- "sssssstttt",
+    -- "ssssssmmmm",
+    -- "",
+    -- "s Slack",
+    -- "t Textual IRC Client",
+    -- "m Messages"
+  -- })
+-- end)
+-- hs.hotkey.bind(hyper, "v", function()
+  -- hs.mjomatic.go({
+    -- "s",
+    -- "",
+    -- "s Spotify"
+  -- })
+-- end)
 
 
 ----------
