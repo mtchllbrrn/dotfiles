@@ -293,6 +293,9 @@ autocmd FileType c,cpp,java,php,ruby,python,javascript autocmd BufWritePre <buff
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
+" Unify vim & system clipboard
+set clipboard=unnamed
+
 "------------------------------------------------------------
 " Mappings {{{1
 
