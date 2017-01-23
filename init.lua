@@ -197,7 +197,7 @@ end)
 ----------
 
 hs.hotkey.bind(hyper, "u", function()
-  hs.application.launchOrFocus("Google Chrome")
+  hs.application.launchOrFocus("Firefox")
 end)
 hs.hotkey.bind(hyper, "y", function()
   hs.application.launchOrFocus("Safari")
