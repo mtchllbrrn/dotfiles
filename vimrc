@@ -118,10 +118,6 @@ endfunction
 " Include space after comment operator
 let g:NERDSpaceDelims = 1
 
-" Disable error-checking on html files. It's too wonky with stuff like
-" template tags.
-let syntastic_mode_map = { 'passive_filetypes': ['html'] }
-
 " Mark syntax errors with :signs
 let g:syntastic_enable_signs=1
 
