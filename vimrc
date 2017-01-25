@@ -37,6 +37,7 @@ Plugin 'rking/ag.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'junegunn/goyo.vim'
 Plugin 'suan/vim-instant-markdown'
+Plugin 'tomlion/vim-solidity'
 
 " Snippets
 Plugin 'honza/vim-snippets'
