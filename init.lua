@@ -140,7 +140,7 @@ end
 -- Modal window layouts
 -- hs.hints.showTitleThresh = 0
 -- hs.hints.style = "vimperator"
--- hs.hotkey.bind(hyper, 'f', hs.hints.windowHints)
+-- hs.hotkey.bind(hyper, 'v', hs.hints.windowHints)
 
 -- Window navigation
 hs.hotkey.bind(hyper, "k", focus("north"))
@@ -151,7 +151,7 @@ hs.hotkey.bind(hyper, "h", focus("west"))
 hs.grid.ui.showExtraKeys = false
 hs.grid.ui.textSize = 25
 hs.grid.setGrid('12x2')
-hs.hotkey.bind(hyper, "u", function()
+hs.hotkey.bind(hyper, "g", function()
   hs.grid.show()
 end)
 
@@ -197,7 +197,7 @@ end)
 ----------
 
 hs.hotkey.bind(hyper, "u", function()
-  hs.application.launchOrFocus("Firefox")
+  hs.application.launchOrFocus("Chromium")
 end)
 hs.hotkey.bind(hyper, "y", function()
   hs.application.launchOrFocus("Safari")
@@ -205,14 +205,12 @@ end)
 hs.hotkey.bind(hyper, "i", function()
   hs.application.launchOrFocus("iTerm")
 end)
---[[
 hs.hotkey.bind(hyper, "o", function()
   hs.application.launchOrFocus("Discord")
 end)
 hs.hotkey.bind(hyper, "p", function()
   hs.application.launchOrFocus("Messages")
 end)
-]]--
 hs.hotkey.bind(hyper, ";", function()
   hs.application.launchOrFocus("Spotify")
 end)
