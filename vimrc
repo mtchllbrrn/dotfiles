@@ -141,6 +141,7 @@ let g:syntastic_auto_loc_list=0
 " This is where the magic happens. Chain together different style checkers
 " in order to check for both style flaws and syntax errors.
 " Syntax checkers: https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
+let g:syntastic_solidity_checkers=['solc']
 let g:syntastic_ruby_checkers=['rubocop', 'mri']
 let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
 let g:syntastic_javascript_checkers=['eslint']
@@ -293,7 +294,7 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-autocmd FileType c,cpp,java,php,ruby,python,javascript autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,javascript,sol autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " Configure scroll-wheel to scroll one line at a time, rather than three
 map <ScrollWheelUp> <C-Y>
