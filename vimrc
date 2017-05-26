@@ -76,6 +76,15 @@ source ~/.simplenoterc
 " vim-pencil config
 " Enable airline pencil-status display
 let g:airline_section_x = '%{PencilMode()}'
+" Enable soft line-wrapping (default is hard)
+let g:pencil#wrapModeDefault = 'soft'
+
+" Configure vim-pencil to auto-initialize on markdown/text buffers
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
 
 " ctrlp config
 let g:ctrlp_show_hidden = 1
