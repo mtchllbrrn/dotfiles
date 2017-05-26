@@ -36,3 +36,7 @@ alias 'mux'='tmuxinator'
 # extend git command with hub's functionality.
 # This doesn't change any of the existing git functionality, simply extends.
 alias git=hub
+
+#
+alias 'ports'='lsof -i -n -P'
+alias 'dc'='docker-compose'
