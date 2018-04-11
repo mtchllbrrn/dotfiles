@@ -18,7 +18,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mrtazz/simplenote.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
-Plugin 'mattn/emmet-vim'
+" Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdcommenter'
@@ -29,7 +29,7 @@ Plugin 'reedes/vim-pencil'
 " Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-surround'
 Plugin 'mxw/vim-jsx'
-Plugin 'vim-scripts/YankRing.vim'
+" Plugin 'vim-scripts/YankRing.vim'
 Plugin 'SirVer/ultisnips'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'ternjs/tern_for_vim'
@@ -38,6 +38,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'junegunn/goyo.vim'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'tomlion/vim-solidity'
+Plugin 'epilande/vim-es2015-snippets'
 
 " Snippets
 Plugin 'honza/vim-snippets'
@@ -348,5 +349,5 @@ let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 
 " YouCompleteMe
-let g:ycm_key_list_select_completion = ['<C-j>']
-let g:ycm_key_list_previous_completion = ['<C-k>']
+" let g:ycm_key_list_select_completion = ['<C-j>']
+" let g:ycm_key_list_previous_completion = ['<C-k>']

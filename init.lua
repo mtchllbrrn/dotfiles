@@ -2,7 +2,13 @@
 -- Setup environment
 -- -----------------
 
--- Auto reload config file on save.
+-- hs.hotkey.bind("rightalt", function() 
+  -- -- 
+  -- hs.alert.show("horrorshow")
+-- end)
+
+hs.hotkey.bind({}, "z", function() hs.eventtap.keyStroke("backspace") end)
+
 function reloadConfig(files)
     doReload = false
     for _,file in pairs(files) do
@@ -197,7 +203,8 @@ end)
 ----------
 
 hs.hotkey.bind(hyper, "u", function()
-  hs.application.launchOrFocus("Firefox")
+  -- hs.application.launchOrFocus("Firefox")
+  hs.application.launchOrFocus("Chromium")
 end)
 hs.hotkey.bind(hyper, "y", function()
   hs.application.launchOrFocus("Safari")

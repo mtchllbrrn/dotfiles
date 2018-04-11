@@ -37,6 +37,6 @@ alias 'mux'='tmuxinator'
 # This doesn't change any of the existing git functionality, simply extends.
 alias git=hub
 
-#
 alias 'ports'='lsof -i -n -P'
 alias 'dc'='docker-compose'
+alias 'mist'='/Applications/Mist.app/Contents/MacOS/Mist'
