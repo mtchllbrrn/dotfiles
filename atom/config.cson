@@ -1,0 +1,24 @@
+"*":
+  core:
+    automaticallyUpdate: false
+    closeDeletedFileTabs: true
+    projectHome: "/Users/mitchell/src"
+    telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+  editor:
+    preferredLineLength: 100
+  "exception-reporting":
+    userId: "60f1aa85-3a05-4c9b-b6d4-9ace94f0a2ec"
+  linter: {}
+  "linter-ui-default": {}
+  tabs:
+    displayMruTabList: false
+    enableMruTabSwitching: false
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-mode-plus": {}
+  welcome:
+    showOnStartup: false
