@@ -21,6 +21,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
 " Plugin 'w0rp/ale' " Async lint engine
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tmux-plugins/vim-tmux-focus-events' " restores focus event, allowing better gitgutter func.
 
 " Improved sytax highlighting for modern JS/JSX.
 Plugin 'pangloss/vim-javascript'
