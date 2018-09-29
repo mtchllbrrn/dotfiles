@@ -2,13 +2,6 @@
 -- Setup environment
 -- -----------------
 
--- hs.hotkey.bind("rightalt", function() 
-  -- -- 
-  -- hs.alert.show("horrorshow")
--- end)
-
-hs.hotkey.bind({}, "z", function() hs.eventtap.keyStroke("backspace") end)
-
 function reloadConfig(files)
     doReload = false
     for _,file in pairs(files) do
