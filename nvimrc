@@ -85,6 +85,14 @@ hi link EasyMotionTarget2First Search
 hi link EasyMotionTarget2Second Search
 hi EasyMotionMoveHL ctermbg=green ctermfg=black
 
+" Gitgutter
+" Disables gg's bindings
+let g:gitgutter_map_keys = 0
+
+" this is not specifically a gitgutter option, but it improves the responsiveness of gutter sign
+" updates
+set updatetime=100
+
 "------------------------------------------------------------
 " Basic Functionality
 
