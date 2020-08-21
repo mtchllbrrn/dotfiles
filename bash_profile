@@ -13,6 +13,8 @@ export NVM_DIR="/Users/mitchell/.nvm"
 
 export EDITOR=vim
 
+bind "set completion-ignore-case on"
+
 prompt_git() {
     local s=""
     local branchName=""
@@ -148,22 +150,57 @@ unset set_prompts
 
 # bootstrap rbenv settings
 #
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="/Users/mitchell/.rbenv/shims:${PATH}"
-export RBENV_SHELL=bash
-source '/usr/local/Cellar/rbenv/1.1.0/libexec/../completions/rbenv.bash'
-command rbenv rehash 2>/dev/null
-rbenv() {
-  local command
-  command="$1"
-  if [ "$#" -gt 0 ]; then
-    shift
-  fi
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="/Users/mitchell/.rbenv/shims:${PATH}"
+# export RBENV_SHELL=bash
+# source '/usr/local/Cellar/rbenv/1.1.0/libexec/../completions/rbenv.bash'
+# command rbenv rehash 2>/dev/null
+# rbenv() {
+#   local command
+#   command="$1"
+#   if [ "$#" -gt 0 ]; then
+#     shift
+#   fi
+# 
+#   case "$command" in
+#   rehash|shell)
+#     eval "$(rbenv "sh-$command" "$@")";;
+#   *)
+#     command rbenv "$command" "$@";;
+#   esac
+# }
 
-  case "$command" in
-  rehash|shell)
-    eval "$(rbenv "sh-$command" "$@")";;
-  *)
-    command rbenv "$command" "$@";;
-  esac
-}
+# user-level binary tools
+export PATH=$PATH:~/bin
+
+# adding Flutter
+export PATH=$PATH:~/bin/flutter/bin
+
+export PATH=$PATH:/usr/local/opt/ruby/bin
+
+# ASDF version manager setup
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mitchell/google-cloud-sdk/path.bash.inc' ]; then . '/Users/mitchell/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mitchell/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/mitchell/google-cloud-sdk/completion.bash.inc'; fi
+
+## added by Anaconda3 2019.03 installer
+## >>> conda init >>>
+## !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/mitchell/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    \eval "$__conda_setup"
+#else
+#    if [ -f "/Users/mitchell/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/mitchell/anaconda3/etc/profile.d/conda.sh"
+#        CONDA_CHANGEPS1=false conda activate base
+#    else
+#        \export PATH="/Users/mitchell/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+## <<< conda init <<<

@@ -23,9 +23,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tmux-plugins/vim-tmux-focus-events' " restores focus event, allowing better gitgutter func.
 
-" Improved sytax highlighting for modern JS/JSX.
+" Improved sytax highlighting for modern web.
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'digitaltoad/vim-pug.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -98,14 +99,20 @@ set updatetime=100
 
 filetype indent plugin on
 
-set background=dark
-syntax on
 colorscheme solarized
+if $ITERM_PROFILE == 'Dark'
+  set background=dark
+else
+  set background=light
+endif
+
+syntax on
 
 set colorcolumn=100
 set wildmenu
 set showcmd
 set hlsearch
+set relativenumber
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -144,6 +151,12 @@ set conceallevel=0
 
 " Unite system and vim clipboard
 set clipboard=unnamed
+
+" Navigate by screen lines, prevents skipping wrapped lines
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 "------------------------------------------------------------
 " Indentation options

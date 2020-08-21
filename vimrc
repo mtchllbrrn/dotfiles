@@ -39,6 +39,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'tomlion/vim-solidity'
 Plugin 'epilande/vim-es2015-snippets'
+Plugin 'digitaltoad/vim-pug'
 
 " Snippets
 Plugin 'honza/vim-snippets'

@@ -9,6 +9,7 @@ alias 'glp'='pretty_git_log'
 alias 'ls'='ls -G'
 alias 'la'='ls -Alh'
 
+alias 'vim'='/usr/local/bin/nvim'
 alias 'mvim'='/Applications/MacVim.app/Contents/MacOS/MacVim'
 alias 'lint'='eslint --ext ".js, .jsx" .'
 
@@ -33,10 +34,9 @@ alias 'notes'='vim -c "Simplenote -l"'
 
 alias 'mux'='tmuxinator'
 
-# extend git command with hub's functionality.
-# This doesn't change any of the existing git functionality, simply extends.
-alias git=hub
-
 alias 'ports'='lsof -i -n -P'
 alias 'dc'='docker-compose'
 alias 'mist'='/Applications/Mist.app/Contents/MacOS/Mist'
+
+export PATH=/Users/mitchell/.local/bin:$PATH
+export EDITOR='/usr/local/bin/nvim'
